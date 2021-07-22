@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">RecklineTest</string>
+
+    <!--START GAME FRAGMENT -->
+    <string name="start_game_fragment_txt_start">Начать игру</string>
+    <string name="start_game_fragment_txt_previous_results">Прежние результаты</string>
+    <string name="start_game_fragment_txt_record">Ваш рекорд: %1$d</string>
+
+
+    <!--RESULT GAME FRAGMENT -->
+    <string name="result_game_fragment_txt_header">Ваш результат:</string>
+    <string name="result_game_fragment_txt_result">%1$d/%2$d</string>
+    <string name="result_game_fragment_txt_right_answers_percent">Процент правильных ответов: %1$d%%</string>
+    <string name="result_game_fragment_txt_new_record">Новый рекорд!</string>
+    <!--MAIN GAME FRAGMENT -->
+    <string name="main_game_fragment_btn_one">1</string>
+    <string name="main_game_fragment_btn_two">2</string>
+    <string name="main_game_fragment_btn_three">3</string>
+    <string name="main_game_fragment_btn_four">4</string>
+    <string name="main_game_fragment_btn_five">5</string>
+    <string name="main_game_fragment_btn_six">6</string>
+    <string name="main_game_fragment_btn_seven">7</string>
+    <string name="main_game_fragment_btn_eight">8</string>
+    <string name="main_game_fragment_btn_nine">9</string>
+    <string name="main_game_fragment_btn_zero">0</string>
+
+    <string name="main_game_fragment_txt_example">%1$s=%2$d</string>
+
+
+</resources>

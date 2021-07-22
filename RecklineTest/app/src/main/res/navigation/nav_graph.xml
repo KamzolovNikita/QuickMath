@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startGameFragment">
+
+    <fragment
+        android:id="@+id/startGameFragment"
+        android:name="com.example.android.recklinetest.game.start.StartGameFragment"
+        android:label="StartGameFragment"
+        tools:layout="@layout/fragment_start_game">
+        <action
+            android:id="@+id/action_startGameFragment_to_mainGameFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:destination="@id/mainGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainGameFragment"
+        android:name="com.example.android.recklinetest.game.main.MainGameFragment"
+        android:label="MainGameFragment"
+        tools:layout="@layout/fragment_main_game">
+        <action
+            android:id="@+id/action_mainGameFragment_to_resultGameFragment"
+            app:destination="@id/resultGameFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/startGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultGameFragment"
+        android:name="com.example.android.recklinetest.game.result.ResultGameFragment"
+        android:label="ResultGameFragment"
+        tools:layout="@layout/fragment_result_game">
+        <argument
+            android:name="correctAnswers"
+            app:argType="integer" />
+        <argument android:name="totalQuestions"
+            app:argType="integer" />
+    </fragment>
+</navigation>

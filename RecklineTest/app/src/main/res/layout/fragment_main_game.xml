@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="mainGameViewModel"
+            type="com.example.android.recklinetest.game.main.MainGameViewModel" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_game_semi_transparent_pink"
+            android:orientation="vertical"
+            tools:context=".game.main.MainGameFragment">
+
+            <ImageView
+                android:id="@+id/img_timer"
+                android:layout_width="@dimen/width_main_game_fragment_img_timer"
+                android:layout_height="@dimen/height_main_game_fragment_img_timer"
+                android:layout_margin="@dimen/margin_main_game_fragment_img_timer"
+                android:importantForAccessibility="no"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_timer" />
+
+
+            <TextView
+                android:id="@+id/text_timer_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{mainGameViewModel.currentTime}"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_timer"
+                app:layout_constraintStart_toEndOf="@+id/img_timer"
+                app:layout_constraintTop_toTopOf="@+id/img_timer"
+                tools:text="60" />
+
+            <TextView
+                android:id="@+id/text_current_example"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{mainGameViewModel.currentExampleWithAnswerString}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_main_game_fragment_current_example"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/gridKeyboard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_current_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_main_game_fragment_current_result"
+                android:text="@{mainGameViewModel.currentScore}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_main_game_fragment_current_result"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="130/150" />
+
+
+            <GridLayout
+                android:id="@+id/gridKeyboard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:columnCount="1"
+                android:paddingStart="@dimen/padding_main_game_fragment_grid_sides"
+                android:paddingEnd="@dimen/padding_main_game_fragment_grid_sides"
+                android:paddingBottom="@dimen/padding_main_game_fragment_grid_bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_main_game_fragment_btn_keyboard_layer_up"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_one"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_one" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_two"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_marginEnd="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_two" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_three"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_main_game_fragment_btn_keyboard_layer_up"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_four"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_four" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_five"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_marginEnd="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_five" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_six"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_six" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_main_game_fragment_btn_keyboard_layer_up"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_seven"
+
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_seven" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_eight"
+
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_marginEnd="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_eight" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_nine"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_nine" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_main_game_fragment_btn_keyboard_layer_up"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/button_keyboard_backspace"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/main_game_blue"
+                        app:srcCompat="@drawable/ic_backspace" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_keyboard_zero"
+                        style="@style/NumberKeyboardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_marginEnd="@dimen/margin_main_game_fragment_center_btn_keyboard_sides"
+                        android:layout_weight="1"
+                        android:text="@string/main_game_fragment_btn_zero" />
+
+                    <ImageButton
+                        android:id="@+id/button_keyboard_check_mark"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/main_game_blue"
+                        app:srcCompat="@drawable/ic_check_mark" />
+
+
+                </LinearLayout>
+
+            </GridLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewCorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/semi_transparent_green" />
+
+        <View
+            android:id="@+id/viewIncorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/semi_transparent_red" />
+
+
+    </FrameLayout>
+
+
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- START GAME FRAGMENT-->
+    <dimen name="margin_start_game_fragment_ui_top">32dp</dimen>
+    <dimen name="padding_start_game_fragment_ui_sides">16dp</dimen>
+    <dimen name="margin_start_game_fragment_btn">42dp</dimen>
+    <dimen name="text_size_start_game_fragment_header">36sp</dimen>
+    <dimen name="text_size_start_game_fragment_btn">28sp</dimen>
+    <dimen name="text_size_start_game_fragment_txt_record">24sp</dimen>
+    <dimen name="margin_start_game_fragment_txt_record">16dp</dimen>
+
+    <!-- RESULT GAME FRAGMENT-->
+    <dimen name="text_size_result_game_fragment_header">36sp</dimen>
+    <dimen name="text_size_result_game_fragment_txt_result">42sp</dimen>
+    <dimen name="margin_result_game_fragment_txt_result_top">16dp</dimen>
+
+    <dimen name="text_size_result_game_fragment_txt_right_answers_percent">24sp</dimen>
+    <dimen name="text_size_result_game_fragment_txt_new_record">24sp</dimen>
+
+    <!-- MAIN GAME FRAGMENT-->
+    <dimen name="text_size_main_game_fragment_btn_keyboard">18sp</dimen>
+    
+    <dimen name="padding_main_game_fragment_grid_bottom">24dp</dimen>
+    <dimen name="padding_main_game_fragment_grid_sides">16dp</dimen>
+    <dimen name="margin_main_game_fragment_btn_keyboard_layer_up">12dp</dimen>
+    <dimen name="margin_main_game_fragment_center_btn_keyboard_sides">12dp</dimen>
+
+    <dimen name="text_size_main_game_fragment_current_example">32sp</dimen>
+
+    <dimen name="text_size_main_game_fragment_current_result">24sp</dimen>
+    <dimen name="margin_main_game_fragment_current_result">16dp</dimen>
+
+    <dimen name="height_main_game_fragment_img_timer">40dp</dimen>
+    <dimen name="width_main_game_fragment_img_timer">40dp</dimen>
+    <dimen name="margin_main_game_fragment_img_timer">16dp</dimen>
+
+    <dimen name="text_size_main_game_fragment_timer_counter">24sp</dimen>
+</resources>
